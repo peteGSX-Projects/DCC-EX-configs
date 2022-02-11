@@ -17,8 +17,8 @@ ONCLOSE(t) \
 SET(p1) \
 SET(p2)DELAY(25)RESET(p2) \
 ONTHROW(t) \
-RESET(p2) \
-SET(p1)DELAY(25)RESET(p1)
+RESET(p1) \
+SET(p2)DELAY(25)RESET(p2)
 
 // Turnout definitions below
 PIN_TURNOUT(1, 164, "Main to inner loop 1")
@@ -26,3 +26,6 @@ PIN_TURNOUT(2, 165, "Main to inner loop 2")
 PIN_TURNOUT(3, 166, "Inner loop to main 1")
 PIN_TURNOUT(4, 167, "Inner loop to main 2")
 DONE
+
+// What to do when turnout command sent
+ROKUHANTURNOUT(1, 164, 172)

@@ -1,0 +1,13 @@
+*
+!.gitignore
+!platformio.ini
+!config.h
+!mySetup.h
+!mySetup.cpp
+!myHal.cpp
+!myAutomation.h
+!myFilter.cpp
+!myAutomation.h
+!myFilter.cpp
+!myLayout.h
+!myWiFiExample.h

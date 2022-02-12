@@ -50,7 +50,7 @@ void halSetup() {
   //   I2C address of module=0x22
 
   MCP23017::create(196, 16, 0x22);
-  MCP23017::create(212, 16, 0x23);
+  //MCP23017::create(212, 16, 0x23); Not currently in use
 
 
   // Alternative form, which allows the INT pin of the module to request a scan

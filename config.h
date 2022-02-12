@@ -174,7 +174,7 @@ The configuration file for DCC-EX Command Station
 // for triggering DCC Accessory Decoders, so that <a addr subaddr 0> generates a
 // DCC packet with D=1 (close turnout) and <a addr subaddr 1> generates D=0 
 // (throw turnout).
-//#define DCC_ACCESSORY_RCN_213
+#define DCC_ACCESSORY_RCN_213
 //
 // HANDLING MULTIPLE SERIAL THROTTLES
 // The command station always operates with the default Serial port.

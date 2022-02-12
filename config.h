@@ -120,4 +120,72 @@ The configuration file for DCC-EX Command Station
 // Also 132x64 I2C SH1106 devices.
 #define OLED_DRIVER 128,64
 
+// Define scroll mode as 0, 1 or 2
+#define SCROLLMODE 1
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// DISABLE EEPROM
+//
+// If you do not need the EEPROM at all, you can disable all the code that saves
+// data in the EEPROM. You might want to do that if you are in a Arduino UNO
+// and want to use the EX-RAIL automation. Otherwise you do not have enough RAM
+// to do that. Of course, then none of the EEPROM related commands works.
+//
+// #define DISABLE_EEPROM
+
+/////////////////////////////////////////////////////////////////////////////////////
+// REDEFINE WHERE SHORT/LONG ADDR break is. According to NMRA the last short address
+// is 127 and the first long address is 128. There are manufacturers which have
+// another view. Lenz CS for example have considered addresses long from 100. If
+// you want to change to that mode, do 
+//#define HIGHEST_SHORT_ADDR 99
+// If you want to run all your locos addressed long format, you could even do a 
+//#define HIGHEST_SHORT_ADDR 0
+// We do not support to use the same address, for example 100(long) and 100(short)
+// at the same time, there must be a border.
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+// DEFINE TURNOUTS/ACCESSORIES FOLLOW NORM RCN-213
+//
+// According to norm RCN-213 a DCC packet with a 1 is closed/straight
+// and one with a 0 is thrown/diverging.  In DCC++ Classic, and in previous
+// versions of DCC++EX, a turnout throw command was implemented in the packet as 
+// '1' and a close command as '0'. The #define below makes the states
+// match with the norm.  But we don't want to cause havoc on existent layouts,
+// so we define this only for new installations. If you don't want this,
+// don't add it to your config.h.
+#define DCC_TURNOUTS_RCN_213
+
+// By default, the driver which defines a DCC accessory decoder
+// does send out the same state change on the DCC packet as it
+// receives. This means a VPIN state=1 sends D=1 (close turnout
+// or signal green) in the DCC packet. This can be reversed if
+// necessary.
+//#define HAL_ACCESSORY_COMMAND_REVERSE
+
+// If you have issues with that the direction of the accessory commands is
+// reversed (for example when converting from another CS to DCC-EX) then
+// you can use this to revese the sense of all accessory commmands sent
+// over DCC++. This #define likewise inverts the behaviour of the <a> command
+// for triggering DCC Accessory Decoders, so that <a addr subaddr 0> generates a
+// DCC packet with D=1 (close turnout) and <a addr subaddr 1> generates D=0 
+// (throw turnout).
+//#define DCC_ACCESSORY_RCN_213
+//
+// HANDLING MULTIPLE SERIAL THROTTLES
+// The command station always operates with the default Serial port.
+// Diagnostics are only emitted on the default serial port and not broadcast.
+// Other serial throttles may be added to the Serial1, Serial2, Serial3 ports
+// which may or may not exist on your CPU. (Mega has all 3)
+// To monitor a throttle on one or more serial ports, uncomment the defines below.
+// NOTE: do not define here the WiFi shield serial port or your wifi will not work.
+//
+//#define SERIAL1_COMMANDS
+//#define SERIAL2_COMMANDS
+//#define SERIAL3_COMMANDS
+
 /////////////////////////////////////////////////////////////////////////////////////

@@ -49,15 +49,15 @@ PIN_TURNOUT(112, 183, "12 Distribution centre split")
 PIN_TURNOUT(113, 184, "13 TBA industry siding")
 
 // Yard turnouts
-PIN_TURNOUT(114, 185, "14 Yard entry branch") // First left turnout after entrance
+PIN_TURNOUT(114, 185, "14 Yard 1") // First left turnout after entrance
 PIN_TURNOUT(115, 186, "15 Runaround siding") // Entry to siding with runaround
 PIN_TURNOUT(116, 187, "16 Rolling road entry")
 PIN_TURNOUT(117, 196, "17 Turntable entry")
 PIN_TURNOUT(118, 197, "18 Runaround 1") // Pair of right turnouts for runaround
 PIN_TURNOUT(119, 198, "19 Runaround 2")
-PIN_TURNOUT(120, 199, "20 Yard 1") // Right turnout
-PIN_TURNOUT(121, 200, "21 Yard 2") // Left turnout
-PIN_TURNOUT(122, 201, "22 Yard 3") // Left turnout
+PIN_TURNOUT(120, 199, "20 Yard 2") // Right turnout
+PIN_TURNOUT(121, 200, "21 Yard 3") // Left turnout
+PIN_TURNOUT(122, 201, "22 Yard 4") // Left turnout
 
 // What to do when turnout command sent
 ROKUHANTURNOUT(101, 164, 172)
@@ -108,7 +108,7 @@ RESET(207)
 RESET(208)
 RESET(209)
 
-// Placehoder here to turn a relay on to supply turnout power
+// Turn the turnout power relay on
 // Relay control sits on the last pin of the last MCP23017
 SET(211)
 

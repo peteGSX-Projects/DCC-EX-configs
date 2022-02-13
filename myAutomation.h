@@ -145,3 +145,18 @@ ONCLOSE(118) CLOSE(119) DONE
 ONTHROW(118) THROW(119) DONE
 ONCLOSE(119) CLOSE(118) DONE
 ONTHROW(119) THROW(118) DONE
+
+// Define the turntable DCC turnouts
+TURNOUT(201, 51, 0, "Stall 1 entry")
+TURNOUT(202, 51, 1, "Stall 2 entry")
+TURNOUT(203, 51, 2, "Stall 3 entry")
+TURNOUT(204, 51, 3, "Stall 4 entry")
+TURNOUT(205, 52, 0, "Stall 5 entry")
+TURNOUT(206, 52, 1, "Stall 6 entry")
+TURNOUT(207, 52, 2, "Stall 7 entry")
+TURNOUT(208, 52, 3, "Stall 8 entry")
+TURNOUT(209, 53, 0, "Storage track 3 entry")
+TURNOUT(210, 53, 1, "Storage track 2 entry")
+TURNOUT(211, 53, 2, "Storage track 1 entry")
+TURNOUT(212, 53, 3, "Layout connection")
+DONE

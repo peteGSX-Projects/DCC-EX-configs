@@ -73,26 +73,33 @@ RESET(209)
 SET(211)
 
 // Close all turnouts on start up
+// Turnouts require ~700mA, so only do four at a time to be
+// nice to the relay and power supply with a 100ms delay to
+// the next four.
+// Turnouts 101/102, 103/104, and 118/119 operate together
+// so only need to close the first of the pairs.
 CLOSE(101)
-CLOSE(102)
 CLOSE(103)
-CLOSE(104)
+DELAY(100)
 CLOSE(105)
 CLOSE(106)
 CLOSE(107)
 CLOSE(108)
+DELAY(100)
 CLOSE(109)
 CLOSE(110)
 CLOSE(111)
 CLOSE(112)
+DELAY(100)
 CLOSE(113)
 CLOSE(114)
 CLOSE(115)
 CLOSE(116)
+DELAY(100)
 CLOSE(117)
 CLOSE(118)
-CLOSE(119)
 CLOSE(120)
+DELAY(100)
 CLOSE(121)
 CLOSE(122)
 

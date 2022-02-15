@@ -49,8 +49,17 @@ void halSetup() {
   //   Number of VPINs=16 (numbered 196-211)
   //   I2C address of module=0x22
 
+// Two default MCP23017s plus this used for turnouts
   MCP23017::create(196, 16, 0x22);
-  //MCP23017::create(212, 16, 0x23); Not currently in use
+
+// Fourth MCP23017 used for decouplers
+  //MCP23017::create(212, 16, 0x23);
+
+// Four defined below ready for allocation
+  //MCP23017::create(228, 16, 0x24); Not currently in use
+  //MCP23017::create(244, 16, 0x25); Not currently in use
+  //MCP23017::create(260, 16, 0x26); Not currently in use
+  //MCP23017::create(276, 16, 0x27); Not currently in use
 
 
   // Alternative form, which allows the INT pin of the module to request a scan

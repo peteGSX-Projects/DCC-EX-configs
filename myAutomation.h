@@ -184,55 +184,6 @@ TURNOUT(212, 53, 3, "Layout connection")
 ALIAS(TT_LAYOUT, 212)
 DONE
 
-// Define sensor aliases
-// ALIAS()
-// DONE
-
-// Define output aliases
-// ALIAS()
-// DONE
-
-// Define signals
-// DONE
-
-/* Decoupler macro
-*  This macro defines turnouts to use for decoupling using electro magnets.
-*
-*  Call this macro with:
-*  DECOUPLER(d, p1, desc, ali)
-*
-*  Where:
-*  d = decoupler ID
-*  p1 = enable pin
-*  desc = description of the turnout
-*  ali = alias assigned to the decoupler ID
-*
-*  Adjust the ENERGISE time (in ms) below as required.
-*
-*  When a turnout command is sent to one of the defined decouplers, the macro
-*  energise the turnout using the defined ENERGISE time.
-*
-*  This also ensures all turnouts are defined as part of the compilation.
-*/
-
-// Define decouplers
-#define ENERGISE 10000
-
-#define DECOUPLER(d, p1, desc, ali) \
-PIN_TURNOUT(d, 0, desc) \
-DONE \
-ALIAS(ali, d) \
-DONE \
-ONCLOSE(d) \
-SET(p1)DELAY(ENERGISE)RESET(p1) \
-DONE \
-ONTHROW(d) \
-SET(p1)DELAY(ENERGISE)RESET(p1) \
-DONE
-
-DECOUPLER(401, 112, "", DCPL_1)
-DONE
-
 /* Main loop ROUTE
 *  Simple route for main loop continuous running
 */

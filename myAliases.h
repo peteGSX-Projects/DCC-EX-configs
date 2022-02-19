@@ -1,0 +1,31 @@
+/* myAliases.h
+*  File to define any aliases not included in
+*  other automation definition files.
+*/
+
+// Turnout power relay
+ALIAS(TOUT_PWR, 211)
+
+// Turnout enable pin aliases
+ALIAS(MA_IND_1_EN, 172)
+ALIAS(IND_MA_1_EN, 173)
+ALIAS(MA_IND_2_EN, 174)
+ALIAS(IND_MA_2_EN, 175)
+ALIAS(YD_E_EN, 176)
+ALIAS(IIND_E1_EN, 177)
+ALIAS(IIND_E2_EN, 178)
+ALIAS(CAR_E_EN, 179)
+ALIAS(CON_E_EN, 188)
+ALIAS(WH_E_EN, 189)
+ALIAS(DIST_E_EN, 190)
+ALIAS(DIST_S_EN, 191)
+ALIAS(TBA_E_EN, 192)
+ALIAS(YD_1_EN, 193)
+ALIAS(RUN_E_EN, 194)
+ALIAS(RR_E_EN, 195)
+ALIAS(TT_E_EN, 204)
+ALIAS(RUN_1_EN, 205)
+ALIAS(RUN_2_EN, 206)
+ALIAS(YD_2_EN, 207)
+ALIAS(YD_3_EN, 208)
+ALIAS(YD_4_EN, 209)

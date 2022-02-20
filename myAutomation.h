@@ -13,8 +13,6 @@
 *  - Close all turnouts
 */
 
-// Ensure
-
 // Ensure all L293D enable pins are RESET before providing turnout power
 // This is to prevent turnout coil burnout
 RESET(MA_IND_1_EN)

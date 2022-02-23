@@ -7,7 +7,7 @@
 */
 
 // TURNOUT_DELAY is used to spread power supply load out between lots of
-// turnout changes as they use ~700mA each. Do four turnouts at once max.
+// turnout changes as they use ~700mA each. Do two turnouts at once max.
 #define TURNOUT_DELAY 100
 
 /* Rokuhan turnout macro

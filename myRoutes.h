@@ -91,19 +91,3 @@ ROUTE(5, "Stall 1 to industry loop")
     AFTER(ST1_E_SNSR) DELAY(2000) CLOSE(TT_LAYOUT) DONE
     AFTER(TT_E_SNSR) CLOSE(TT_E) DONE
     DONE
-
-// Decoupler ROUTES
-#define DECOUPLE_TIME 10000
-
-#define DECOUPLER(p1, desc) \
-    ROUTE(300+p1, desc) \
-        SERVO(p1, 10, Fast) \
-        DELAY(DECOUPLE_TIME) \
-        SERVO(p1, 200, Fast) \
-    DONE
-
-DECOUPLER(101, "Yard declouper 1 - right branch")
-DECOUPLER(102, "Yard declouper 2 - run around entry")
-DECOUPLER(103, "Run around declouper")
-DECOUPLER(104, "Stall 7 declouper")
-DONE

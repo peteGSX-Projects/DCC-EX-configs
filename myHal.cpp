@@ -52,14 +52,12 @@ void halSetup() {
 // Two default MCP23017s plus this used for turnouts
   MCP23017::create(196, 16, 0x22);
 
-// Fourth MCP23017 used for decouplers
+// Five defined below ready for allocation
   //MCP23017::create(212, 16, 0x23);
-
-// Four defined below ready for allocation
-  //MCP23017::create(228, 16, 0x24); Not currently in use
-  //MCP23017::create(244, 16, 0x25); Not currently in use
-  //MCP23017::create(260, 16, 0x26); Not currently in use
-  //MCP23017::create(276, 16, 0x27); Not currently in use
+  //MCP23017::create(228, 16, 0x24);
+  //MCP23017::create(244, 16, 0x25);
+  //MCP23017::create(260, 16, 0x26);
+  //MCP23017::create(276, 16, 0x27);
 
 
   // Alternative form, which allows the INT pin of the module to request a scan

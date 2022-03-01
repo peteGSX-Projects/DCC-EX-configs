@@ -20,9 +20,9 @@
 
 #define DECOUPLER(p1, desc) \
     ROUTE(300+p1, desc) \
-        SERVO(p1, 10, Instant) \
+        SERVO(p1, 400, Instant) \
         DELAY(DECOUPLE_TIME) \
-        SERVO(p1, 200, Instant) \
+        SERVO(p1, 100, Instant) \
     DONE
 
 DECOUPLER(101, "Yard declouper 1 - right branch")

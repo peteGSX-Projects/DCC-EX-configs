@@ -9,7 +9,7 @@
 *  main track to allow service mode programming.
 */
 ROUTE(501, "Rolling road progamming mode")
-    SERVO(115, 0, Slow)
+    SERVO(115, 400, Slow)
     UNJOIN
     DONE
 
@@ -19,7 +19,7 @@ ROUTE(501, "Rolling road progamming mode")
 *  track to allow for motor run in.
 */
 ROUTE(502, "Rolling road run in mode")
-    SERVO(115, 0, Slow)
+    SERVO(115, 400, Slow)
     JOIN
     DONE
 
@@ -29,6 +29,6 @@ ROUTE(502, "Rolling road run in mode")
 *  back onto the main track.
 */
 ROUTE(503, "Rolling road to main mode")
-    SERVO(115, 200, Slow)
+    SERVO(115, 110, Slow)
     JOIN
     DONE

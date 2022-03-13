@@ -7,5 +7,5 @@
 */
 
 // Define loco roster
-ROSTER(3, "Test track")
+ROSTER(3, "Test track", "Lights")
 DONE

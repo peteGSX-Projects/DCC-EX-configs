@@ -53,7 +53,7 @@ DONE
 ROKUHANTURNOUT(101, 164, 172, "Main to industry loop 1", MA_IND_1) // Pair of left turnouts
 ROKUHANTURNOUT(102, 165, 173, "Industry loop to main 1", IND_MA_1)
 ROKUHANTURNOUT(103, 166, 174, "Main to industry loop 2", MA_IND_2) // Pair of right turnouts)
-ROKUHANTURNOUT(104, 165, 175, "Industry loop to main 2", IND_MA_2)
+ROKUHANTURNOUT(104, 165, 203, "Industry loop to main 2", IND_MA_2)
 
 // Industry loop turnouts
 ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)
@@ -105,7 +105,7 @@ ALIAS(TOUT_PWR, 211)
 ALIAS(MA_IND_1_EN, 172)
 ALIAS(IND_MA_1_EN, 173)
 ALIAS(MA_IND_2_EN, 174)
-ALIAS(IND_MA_2_EN, 175)
+ALIAS(IND_MA_2_EN, 203)
 ALIAS(YD_E_EN, 176)
 ALIAS(IIND_E1_EN, 177)
 ALIAS(IIND_E2_EN, 178)

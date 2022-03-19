@@ -53,7 +53,7 @@ DONE
 ROKUHANTURNOUT(101, 164, 172, "Main to industry loop 1", MA_IND_1) // Pair of left turnouts
 ROKUHANTURNOUT(102, 165, 173, "Industry loop to main 1", IND_MA_1)
 ROKUHANTURNOUT(103, 166, 174, "Main to industry loop 2", MA_IND_2) // Pair of right turnouts)
-ROKUHANTURNOUT(104, 165, 203, "Industry loop to main 2", IND_MA_2)
+ROKUHANTURNOUT(104, 167, 203, "Industry loop to main 2", IND_MA_2)
 
 // Industry loop turnouts
 ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)

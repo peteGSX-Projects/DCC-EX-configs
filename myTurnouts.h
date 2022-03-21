@@ -35,7 +35,6 @@
 
 #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
 PIN_TURNOUT(t, 0, desc) \
-DONE \
 ALIAS(ali, t) \
 DONE \
 ONCLOSE(t) \

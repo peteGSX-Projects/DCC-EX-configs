@@ -6,29 +6,36 @@
 *  correct order when compiled.
 */
 
-// Define the turntable DCC turnouts
-TURNOUT(201, 51, 0, "TT Stall 1 entry")
-ALIAS(TT_ST1, 201)
-TURNOUT(202, 51, 1, "TT Stall 2 entry")
-ALIAS(TT_ST2, 202)
-TURNOUT(203, 51, 2, "TT Stall 3 entry")
-ALIAS(TT_ST3, 203)
-TURNOUT(204, 51, 3, "TT Stall 4 entry")
-ALIAS(TT_ST4, 204)
-TURNOUT(205, 52, 0, "TT Stall 5 entry")
-ALIAS(TT_ST5, 205)
-TURNOUT(206, 52, 1, "TT Stall 6 entry")
-ALIAS(TT_ST6, 206)
-TURNOUT(207, 52, 2, "TT Stall 7 entry")
-ALIAS(TT_ST7, 207)
-TURNOUT(208, 52, 3, "TT Stall 8 entry")
-ALIAS(TT_ST8, 208)
-TURNOUT(209, 53, 0, "TT Storage track 3 entry")
-ALIAS(TT_STOR3, 209)
-TURNOUT(210, 53, 1, "TT Storage track 2 entry")
-ALIAS(TT_STOR2, 210)
-TURNOUT(211, 53, 2, "TT Storage track 1 entry")
-ALIAS(TT_STOR1, 211)
-TURNOUT(212, 53, 3, "TT Layout connection")
-ALIAS(TT_LAYOUT, 212)
-DONE
+// Define the turntable route macro
+#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
+  ROUTE(route_id, desc) \
+    RESERVE(reserve_id) \
+    MOVETT(vpin, steps, activity) \
+    WAITFOR(vpin) \
+    FREE(reserve_id) \
+    DONE
+
+EX_TURNTABLE(TTROUTE_1, EXTT_1, 600, 114, Turn, "Roundhose stall 1")
+EX_TURNTABLE(TTROUTE_2, EXTT_1, 600, 194, Turn, "Roundhose stall 2")
+EX_TURNTABLE(TTROUTE_3, EXTT_1, 600, 274, Turn, "Roundhose stall 3")
+EX_TURNTABLE(TTROUTE_4, EXTT_1, 600, 354, Turn, "Roundhose stall 4")
+EX_TURNTABLE(TTROUTE_5, EXTT_1, 600, 434, Turn, "Roundhose stall 5")
+EX_TURNTABLE(TTROUTE_6, EXTT_1, 600, 514, Turn, "Roundhose stall 6")
+EX_TURNTABLE(TTROUTE_7, EXTT_1, 600, 594, Turn, "Roundhose stall 7")
+EX_TURNTABLE(TTROUTE_8, EXTT_1, 600, 674, Turn, "Roundhose stall 8")
+EX_TURNTABLE(TTROUTE_9, EXTT_1, 600, 114, Turn, "Storage track")
+EX_TURNTABLE(TTROUTE_10, EXTT_1, 600, 2500, Turn, "Layout connection")
+EX_TURNTABLE(TTROUTE_11, EXTT_1, 600, 2660, Turn, "Home turntable")
+
+ALIAS(EXTT_1, 255)
+ALIAS(TTROUTE_1)
+ALIAS(TTROUTE_2)
+ALIAS(TTROUTE_3)
+ALIAS(TTROUTE_4)
+ALIAS(TTROUTE_5)
+ALIAS(TTROUTE_6)
+ALIAS(TTROUTE_7)
+ALIAS(TTROUTE_8)
+ALIAS(TTROUTE_9)
+ALIAS(TTROUTE_10)
+ALIAS(TTROUTE_11)

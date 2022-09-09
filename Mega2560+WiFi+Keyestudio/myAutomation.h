@@ -63,6 +63,7 @@ START(TTROUTE_1)
 DONE
 
 #include "turnoutTesting.h"
+#include "myTurntable.h"
 
 // Startup sequences start here.
 

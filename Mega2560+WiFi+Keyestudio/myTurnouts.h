@@ -31,7 +31,7 @@
 *
 *  This also ensures all turnouts are defined as part of the compilation.
 */
-#define PULSE 25
+#define PULSE 50
 
 #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
 PIN_TURNOUT(t, 0, desc) \

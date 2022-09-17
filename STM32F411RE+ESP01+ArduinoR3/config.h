@@ -129,7 +129,7 @@ The configuration file for DCC-EX Command Station
 //OR define OLED_DRIVER width,height in pixels (address auto detected)
 // 128x32 or 128x64 I2C SSD1306-based devices are supported.
 // Use 132,64 for a SH1106-based I2C device with a 128x64 display.
-// #define OLED_DRIVER 128,32
+#define OLED_DRIVER 128,64
 
 // Define scroll mode as 0, 1 or 2
 //  *  #define SCROLLMODE 0 is scroll continuous (fill screen if poss),
@@ -196,7 +196,7 @@ The configuration file for DCC-EX Command Station
 // NOTE: do not define here the WiFi shield serial port or your wifi will not work.
 //
 //#define SERIAL1_COMMANDS
-//#define SERIAL2_COMMANDS
+// #define SERIAL2_COMMANDS
 //#define SERIAL3_COMMANDS
 
 /////////////////////////////////////////////////////////////////////////////////////

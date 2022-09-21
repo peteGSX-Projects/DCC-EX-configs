@@ -44,11 +44,11 @@ The configuration file for DCC-EX Command Station
 //   |
 //   +-----------------------v
 //
-#define FUNDUMOTO_SHIELD F("FUNDUMOTO_SHIELD"),\
+#define FUNDUMOTO F("FUNDUMOTO"),\
   new MotorDriver(10, 12, UNUSED_PIN, UNUSED_PIN, A0, 10.39, 1500, UNUSED_PIN), \
   new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 3.26, 1500, UNUSED_PIN)
 
-#define MOTOR_SHIELD_TYPE FUNDUMOTO_SHIELD
+#define MOTOR_SHIELD_TYPE FUNDUMOTO
 
 // #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 /////////////////////////////////////////////////////////////////////////////////////
@@ -132,7 +132,7 @@ The configuration file for DCC-EX Command Station
 //OR define OLED_DRIVER width,height in pixels (address auto detected)
 // 128x32 or 128x64 I2C SSD1306-based devices are supported.
 // Use 132,64 for a SH1106-based I2C device with a 128x64 display.
-#define OLED_DRIVER 128,64
+// #define OLED_DRIVER 128,64
 
 // Define scroll mode as 0, 1 or 2
 //  *  #define SCROLLMODE 0 is scroll continuous (fill screen if poss),
@@ -172,7 +172,7 @@ The configuration file for DCC-EX Command Station
 // match with the norm.  But we don't want to cause havoc on existent layouts,
 // so we define this only for new installations. If you don't want this,
 // don't add it to your config.h.
-#define DCC_TURNOUTS_RCN_213
+// #define DCC_TURNOUTS_RCN_213
 
 // By default, the driver which defines a DCC accessory decoder
 // does send out the same state change on the DCC packet as it
@@ -188,7 +188,7 @@ The configuration file for DCC-EX Command Station
 // for triggering DCC Accessory Decoders, so that <a addr subaddr 0> generates a
 // DCC packet with D=1 (close turnout) and <a addr subaddr 1> generates D=0 
 // (throw turnout).
-#define DCC_ACCESSORY_RCN_213
+// #define DCC_ACCESSORY_RCN_213
 //
 // HANDLING MULTIPLE SERIAL THROTTLES
 // The command station always operates with the default Serial port.

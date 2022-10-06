@@ -92,7 +92,7 @@ The configuration file for DCC-EX Command Station
 // #define WIFI_PASSWORD "Your network passwd"
 //
 // WIFI_HOSTNAME: You probably don't need to change this
-#define WIFI_HOSTNAME "stm32"
+
 //
 // WIFI_CHANNEL: If the line "#define ENABLE_WIFI true" is uncommented, 
 // WiFi will be enabled (Mega only). The default channel is set to "1" whether
@@ -198,5 +198,5 @@ The configuration file for DCC-EX Command Station
 //#define SERIAL1_COMMANDS
 // #define SERIAL2_COMMANDS
 //#define SERIAL3_COMMANDS
-
+#define SERIAL6_COMMANDS
 /////////////////////////////////////////////////////////////////////////////////////

@@ -11,3 +11,4 @@ Need to add an include at the top of config.h:
 
 #define WIFI_SSID "<SSID>"
 #define WIFI_PASSWORD "<password>"
+#define WIFI_HOSTNAME "hostname"

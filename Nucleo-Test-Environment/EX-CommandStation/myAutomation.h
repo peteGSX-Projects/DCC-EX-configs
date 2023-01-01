@@ -72,7 +72,7 @@ EX_TRAVERSER(TRROUTE6, TRAVERSER, 601, 1000, Turn, "Traverser Position 6")
 EX_TRAVERSER(TRROUTE7, TRAVERSER, 601, 0, Home, "Traverser Homing")
 EX_TRAVERSER(TRROUTE8, TRAVERSER, 601, 0, Calibrate, "Traverser Calibration")
 
-Rotary encoder event handler
+// Rotary encoder event handler
 ONCHANGE(700)
   IFRE(700, 0)
     START(TTROUTE7)

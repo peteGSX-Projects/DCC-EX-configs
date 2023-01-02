@@ -22,7 +22,7 @@ void halSetup() {
 
   EXTurntable::create(600, 1, 0x60);
 
-  // RotaryEncoder::create(700, 1, 0x80);
+  // RotaryEncoder::create(700, 1, 0x70);
 }
 
 #endif

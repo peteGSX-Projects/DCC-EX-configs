@@ -5,6 +5,8 @@ START(TTROUTE1)
 
 DONE
 
+#include "myVpinAllocations.h"
+
 ROUTE(JOIN_ROUTE, "Join prog/main")
   JOIN
   DONE

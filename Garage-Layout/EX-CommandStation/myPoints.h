@@ -1,40 +1,36 @@
-/* myTurnouts.h
-*  This file contains all turnout macros and definitions.
+/* myPoints.h
+*  This file contains all point macros and definitions.
 *
 *  Any related activities that need to occur on startup need to
 *  be included in myAutomation.h to ensure they are in the 
 *  correct order when compiled.
 */
 
-// TURNOUT_DELAY is used to spread power supply load out between lots of
-// turnout changes as they use ~700mA each. Do two turnouts at once max.
-#define TURNOUT_DELAY 50
-
-/* Rokuhan turnout macro
-*  This macro defines Rokuhan turnouts as well as ensuring that these
-*  turnouts are driven only by a short pulse to prevent coil burn out.
+/* Rokuhan point macro
+*  This macro defines Rokuhan points as well as ensuring that these
+*  points are driven only by a short pulse to prevent coil burn out.
 *
 *  Call this macro with:
-*  ROKUHANTURNOUT(t, p1, p2, desc, ali)
+*  ROKUHANpoint(t, p1, p2, desc, ali)
 *
 *  Where:
-*  t = turnout ID
+*  t = point ID
 *  p1 = direction pin
 *  p2 = enable pin
-*  desc = description of the turnout
-*  ali = alias assigned to the turnout ID
+*  desc = description of the point
+*  ali = alias assigned to the point ID
 *
 *  Adjust the PULSE time (in ms) below as required, 25 seems reliable.
 *
-*  When a turnout command is sent to one of the defined turnouts, the macro
-*  will close or throw the turnout using the defined PULSE time.
+*  When a point command is sent to one of the defined points, the macro
+*  will close or throw the point using the defined PULSE time.
 *
-*  This also ensures all turnouts are defined as part of the compilation.
+*  This also ensures all points are defined as part of the compilation.
 */
 #define PULSE 50
 
-#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
-PIN_TURNOUT(t, 0, desc) \
+#define ROKUHANPOINT(t, p1, p2, desc, ali) \
+VIRTUAL_TURNOUT(t, desc) \
 ALIAS(ali, t) \
 DONE \
 ONCLOSE(t) \
@@ -46,27 +42,27 @@ RESET(p1) \
 SET(p2)DELAY(PULSE)RESET(p2) \
 DONE
 
-// Turnout definitions using the ROKUHANTURNOUT macro
+// Turnout definitions using the ROKUHANPOINT macro
 
 // Industry loop turnouts
-ROKUHANTURNOUT(105, 168, 176, "Yard entrance", YD_E)
-ROKUHANTURNOUT(106, 169, 177, "Inner industry loop entrance 1", IIND_E1) // Behind roundhouse
-ROKUHANTURNOUT(107, 170, 178, "Inner industry loop entrance 2", IIND_E2) // To right of main turnouts
-ROKUHANTURNOUT(108, 171, 179, "Car loading entrance", CAR_E)
-ROKUHANTURNOUT(109, 180, 188, "Container loading entrance", CON_E)
-ROKUHANTURNOUT(110, 181, 189, "Warehouse siding entrance", WH_E)
-ROKUHANTURNOUT(111, 182, 190, "Distribution centre entrance", DIST_E)
-ROKUHANTURNOUT(112, 183, 191, "Distribution centre split", DIST_S)
-ROKUHANTURNOUT(113, 184, 192, "TBA industry siding entrance", TBA_E)
+ROKUHANPOINT(105, 168, 176, "Yard entrance", YD_E)
+ROKUHANPOINT(106, 169, 177, "Inner industry loop entrance 1", IIND_E1) // Behind roundhouse
+ROKUHANPOINT(107, 170, 178, "Inner industry loop entrance 2", IIND_E2) // To right of main POINTs
+ROKUHANPOINT(108, 171, 179, "Car loading entrance", CAR_E)
+ROKUHANPOINT(109, 180, 188, "Container loading entrance", CON_E)
+ROKUHANPOINT(110, 181, 189, "Warehouse siding entrance", WH_E)
+ROKUHANPOINT(111, 182, 190, "Distribution centre entrance", DIST_E)
+ROKUHANPOINT(112, 183, 191, "Distribution centre split", DIST_S)
+ROKUHANPOINT(113, 184, 192, "TBA industry siding entrance", TBA_E)
 
-// Yard turnouts
-ROKUHANTURNOUT(114, 185, 193, "Yard 1", YD_1) // First left turnout after entrance)
-ROKUHANTURNOUT(115, 186, 194, "Runaround siding entry", RUN_E) // Entry to siding with runaround
-ROKUHANTURNOUT(116, 187, 195, "Rolling road entry", RR_E)
-ROKUHANTURNOUT(117, 196, 204, "Turntable entry", TT_E)
-ROKUHANTURNOUT(120, 199, 207, "Yard 2", YD_2) // Right turnout
-ROKUHANTURNOUT(121, 200, 208, "Yard 3", YD_3) // Left turnout
-ROKUHANTURNOUT(122, 201, 209, "Yard 4", YD_4) // Left turnout
+// Yard POINTs
+ROKUHANPOINT(114, 185, 193, "Yard 1", YD_1) // First left POINT after entrance)
+ROKUHANPOINT(115, 186, 194, "Runaround siding entry", RUN_E) // Entry to siding with runaround
+ROKUHANPOINT(116, 187, 195, "Rolling road entry", RR_E)
+ROKUHANPOINT(117, 196, 204, "Turntable entry", TT_E)
+ROKUHANPOINT(120, 199, 207, "Yard 2", YD_2) // Right POINT
+ROKUHANPOINT(121, 200, 208, "Yard 3", YD_3) // Left POINT
+ROKUHANPOINT(122, 201, 209, "Yard 4", YD_4) // Left turnout
 DONE
 
 /* Rokuhan turnout pair macro

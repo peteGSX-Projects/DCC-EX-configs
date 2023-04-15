@@ -37,7 +37,7 @@ ONCLOSE(point_id) \
 SET(dir_pin) \
 SET(en_pin)DELAY(PULSE)RESET(en_pin) \
 DONE \
-ONTHROW(point) \
+ONTHROW(point_id) \
 RESET(dir_pin) \
 SET(en_pin)DELAY(PULSE)RESET(en_pin) \
 DONE

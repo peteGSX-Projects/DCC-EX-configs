@@ -11,7 +11,7 @@
 HAL(MCP23017, 164, 16, 0x20)
 HAL(MCP23017, 180, 16, 0x21)
 HAL(MCP23017, 196, 16, 0x22)
-HAL(IO_EXTurntable, 600, 1, 0x60)
+HAL(EXTurntable, 600, 1, 0x60)
 // HAL(RotaryEncoder, 700, 2, 0x70)
 
 // These things need to happen at startup

@@ -7,12 +7,16 @@
 // Include pin aliases as these are used throughout
 #include "myPinAliases.h"
 
+// Include extra device drivers
+#include "IO_EXTurntable.h"
+#include "IO_RotaryEncoder.h"
+
 // Define I2C devices here
 HAL(MCP23017, 164, 16, 0x20)
 HAL(MCP23017, 180, 16, 0x21)
 HAL(MCP23017, 196, 16, 0x22)
 HAL(EXTurntable, 600, 1, 0x60)
-// HAL(RotaryEncoder, 700, 2, 0x70)
+HAL(RotaryEncoder, 700, 2, 0x70)
 
 // These things need to happen at startup
 AUTOSTART
@@ -35,6 +39,7 @@ RESET(POINT11_EN)
 RESET(POINT12_EN)
 RESET(POINT13_EN)
 RESET(POINT14_EN)
+RESET(POINT15_EN)
 
 // Turn power relay on and wait 1/2 a second
 SET(POINT_POWER)
@@ -53,6 +58,7 @@ CLOSE(POINT9)
 CLOSE(POINT10)
 CLOSE(POINT11)
 CLOSE(POINT12)
+CLOSE(POINT13)
 
 START(TTROUTE_1)
 

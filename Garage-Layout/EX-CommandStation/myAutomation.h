@@ -17,6 +17,7 @@ HAL(MCP23017, 180, 16, 0x21)
 HAL(MCP23017, 196, 16, 0x22)
 HAL(EXTurntable, 600, 1, 0x60)
 HAL(RotaryEncoder, 700, 2, 0x70)
+HAL(EXIOExpander, 800, 97, 0x65)
 
 // These things need to happen at startup
 AUTOSTART

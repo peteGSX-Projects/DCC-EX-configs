@@ -18,23 +18,20 @@
 */
 #define DECOUPLE_TIME 10000
 
-#define DECOUPLER(p1, desc) \
+#define DECOUPLER(p1, desc, led_pin) \
     ROUTE(300+p1, desc) \
         SERVO(p1, 400, Instant) \
+        SET(led_pin) \
         DELAY(DECOUPLE_TIME) \
         SERVO(p1, 100, Instant) \
+        UNSET(led_pin) \
     DONE
 
-DECOUPLER(101, "Yard declouper 1 - right branch")
-DECOUPLER(102, "Yard declouper 2 - run around entry")
-DECOUPLER(103, "Run around declouper")
-DECOUPLER(104, "Stall 7 declouper")
-DECOUPLER(105, "Storage 1 declouper")
-DECOUPLER(106, "Storage 2 declouper")
-DECOUPLER(107, "Storage 3 declouper")
-DECOUPLER(108, "Car loading declouper")
-DECOUPLER(109, "Container loading declouper")
-DECOUPLER(110, "Warehouse siding declouper")
-DECOUPLER(111, "Distribution siding declouper")
-DECOUPLER(112, "TBA siding declouper")
+DECOUPLER(101, "Container decoupler", DECOUPLER1_LED)
+DECOUPLER(102, "Car decoupler", DECOUPLER2_LED)
+DECOUPLER(103, "Warehouse decoupler", DECOUPLER3_LED)
+DECOUPLER(104, "Storage 3 decoupler", DECOUPLER4_LED)
+DECOUPLER(105, "Storage 2 decoupler", DECOUPLER5_LED)
+DECOUPLER(106, "Storage 1 decoupler", DECOUPLER6_LED)
+DECOUPLER(107, "Maintenance decoupler", DECOUPLER7_LED)
 DONE

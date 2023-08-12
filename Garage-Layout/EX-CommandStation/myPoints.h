@@ -36,7 +36,7 @@ DONE \
 ONCLOSE(point_id) \
 SET(dir_pin) \
 SET(en_pin)DELAY(PULSE)RESET(en_pin) \
-UNSET(led_pin) \
+RESET(led_pin) \
 DONE \
 ONTHROW(point_id) \
 RESET(dir_pin) \
@@ -90,7 +90,7 @@ DONE \
 ONCLOSE(point1_id) \
 SET(point1_dir) SET(point2_dir) \
 SET(point1_en) SET(point2_en) DELAY(PULSE) RESET(point1_en) RESET(point2_en) \
-UNSET(led_pin1) UNSET(led_pin2) \
+RESET(led_pin1) RESET(led_pin2) \
 DONE \
 ONTHROW(point1_id) \
 RESET(point1_dir) RESET(point2_dir) \

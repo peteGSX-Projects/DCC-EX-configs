@@ -2,6 +2,15 @@
 * This file contains aliases for the pin names on my layout.
 */
 
+// Decoupler aliases for 7 servos on PCA9685
+ALIAS(DECOUPLER1, 101)
+ALIAS(DECOUPLER2, 102)
+ALIAS(DECOUPLER3, 103)
+ALIAS(DECOUPLER4, 104)
+ALIAS(DECOUPLER5, 105)
+ALIAS(DECOUPLER6, 106)
+ALIAS(DECOUPLER7, 107)
+
 // Point aliases for 3 x MCP23017s in my point controller
 ALIAS(POINT1_DIR,164)
 ALIAS(POINT2_DIR,165)

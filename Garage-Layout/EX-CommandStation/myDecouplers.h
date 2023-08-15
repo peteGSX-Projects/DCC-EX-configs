@@ -18,7 +18,8 @@
 */
 #define DECOUPLE_TIME 10000
 
-#define DECOUPLER(p1, desc, led_pin) \
+#define DECOUPLER(p1, desc, led_pin, alias) \
+    ALIAS(alias, 300+p1)
     ROUTE(300+p1, desc) \
         SERVO(p1, 400, Instant) \
         SET(led_pin) \
@@ -27,11 +28,11 @@
         UNSET(led_pin) \
     DONE
 
-DECOUPLER(101, "Container decoupler", DECOUPLER1_LED)
-DECOUPLER(102, "Car decoupler", DECOUPLER2_LED)
-DECOUPLER(103, "Warehouse decoupler", DECOUPLER3_LED)
-DECOUPLER(104, "Storage 3 decoupler", DECOUPLER4_LED)
-DECOUPLER(105, "Storage 2 decoupler", DECOUPLER5_LED)
-DECOUPLER(106, "Storage 1 decoupler", DECOUPLER6_LED)
-DECOUPLER(107, "Maintenance decoupler", DECOUPLER7_LED)
+DECOUPLER(DECOUPLER1, "Warehouse decoupler", DECOUPLER1_LED, WAREHOUSE_DECOUPLER)
+DECOUPLER(DECOUPLER2, "Car loading decoupler", DECOUPLER2_LED, CAR_DECOUPLER)
+DECOUPLER(DECOUPLER3, "Container decoupler", DECOUPLER3_LED, CONTAINER_DECOUPLER)
+DECOUPLER(DECOUPLER4, "Storage 3 decoupler", DECOUPLER4_LED, STORAGE3_DECOUPLER)
+DECOUPLER(DECOUPLER5, "Storage 2 decoupler", DECOUPLER5_LED, STORAGE2_DECOUPLER)
+DECOUPLER(DECOUPLER6, "Storage 1 decoupler", DECOUPLER6_LED, STORAGE1_DECOUPLER)
+DECOUPLER(DECOUPLER7, "Maintenance decoupler", DECOUPLER7_LED, MAINTENANCE_DECOUPLER7)
 DONE

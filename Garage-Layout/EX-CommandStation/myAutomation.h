@@ -69,3 +69,5 @@ DONE
 #include "myTurntable.h"
 #include "myRoster.h"
 #include "myRoutes.h"
+#include "myMimicPanel.h"
+#include "myDecouplers.h"

@@ -30,33 +30,33 @@
 #define PULSE 50
 
 #define ROKUHANPOINT(point_id,dir_pin,en_pin,description,alias,led_pin,close_pin,throw_pin) \
-VIRTUAL_TURNOUT(point_id, description) \
 ALIAS(alias, point_id) \
+VIRTUAL_TURNOUT(alias, description) \
 DONE \
-ONCLOSE(point_id) \
+ONCLOSE(alias) \
   SET(dir_pin) \
   SET(en_pin)DELAY(PULSE)RESET(en_pin) \
   RESET(led_pin) \
 DONE \
-ONTHROW(point_id) \
+ONTHROW(alias) \
   RESET(dir_pin) \
   SET(en_pin)DELAY(PULSE)RESET(en_pin) \
   SET(led_pin) \
 DONE \
-AUTOSTART SEQUENCE(point_id) \
+AUTOSTART SEQUENCE(alias) \
   IF(close_pin) \
     AFTER(close_pin) \
-      IFTHROWN(point_id) \
-        CLOSE(point_id) \
+      IFTHROWN(alias) \
+        CLOSE(alias) \
       ENDIF \
   ENDIF \
   IF(throw_pin) \
     AFTER(throw_pin) \
-      IFCLOSED(point_id) \
-        THROW(point_id) \
+      IFCLOSED(alias) \
+        THROW(alias) \
       ENDIF \
   ENDIF \
-FOLLOW(point_id)
+FOLLOW(alias)
 
 // Turnout definitions using the ROKUHANPOINT macro
 
@@ -97,46 +97,46 @@ ROKUHANPOINT(13,POINT15_DIR,POINT15_EN,"Industry loop west",INDUSTRY_LOOP_WEST,P
 *
 *  This also ensures all points are defined as part of the compilation.
 */
-#define ROKUHANPOINTPAIR(point1_id,point1_dir,point1_en,point2_dir,point2_en,description,alias,led_pin1,led_pin2,close_pin1,throw_pin1,close_pin2,throw_pin2) \
-VIRTUAL_TURNOUT(point1_id, description) \
-ALIAS(alias, point1_id) \
+#define ROKUHANPOINTPAIR(point_id,point1_dir,point1_en,point2_dir,point2_en,description,alias,led_pin1,led_pin2,close_pin1,throw_pin1,close_pin2,throw_pin2) \
+ALIAS(alias, point_id) \
+VIRTUAL_TURNOUT(alias, description) \
 DONE \
-ONCLOSE(point1_id) \
+ONCLOSE(alias) \
 SET(point1_dir) SET(point2_dir) \
 SET(point1_en) SET(point2_en) DELAY(PULSE) RESET(point1_en) RESET(point2_en) \
 RESET(led_pin1) RESET(led_pin2) \
 DONE \
-ONTHROW(point1_id) \
+ONTHROW(alias) \
 RESET(point1_dir) RESET(point2_dir) \
 SET(point1_en) SET(point2_en) DELAY(PULSE) RESET(point1_en) RESET(point2_en) \
 SET(led_pin1) SET(led_pin2) \
 DONE \
-AUTOSTART SEQUENCE(point1_id) \
+AUTOSTART SEQUENCE(alias) \
   IF(close_pin1) \
     AFTER(close_pin1) \
-      IFTHROWN(point1_id) \
-        CLOSE(point1_id) \
+      IFTHROWN(alias) \
+        CLOSE(alias) \
       ENDIF \
   ENDIF \
   IF(throw_pin1) \
     AFTER(throw_pin1) \
-      IFCLOSED(point1_id) \
-        THROW(point1_id) \
+      IFCLOSED(alias) \
+        THROW(alias) \
       ENDIF \
   ENDIF \
   IF(close_pin2) \
     AFTER(close_pin2) \
-      IFTHROWN(point1_id) \
-        CLOSE(point1_id) \
+      IFTHROWN(alias) \
+        CLOSE(alias) \
       ENDIF \
   ENDIF \
   IF(throw_pin2) \
     AFTER(throw_pin2) \
-      IFCLOSED(point1_id) \
-        THROW(point1_id) \
+      IFCLOSED(alias) \
+        THROW(alias) \
       ENDIF \
   ENDIF \
-FOLLOW(point1_id)
+FOLLOW(alias)
 
 ROKUHANPOINTPAIR(1,POINT1_DIR,POINT1_EN,POINT2_DIR,POINT2_EN,"Station siding west",STATION_SIDING_WEST,POINT1_LED,POINT2_LED,POINT1_CLOSE,POINT1_THROW,POINT2_CLOSE,POINT2_THROW)
 ROKUHANPOINTPAIR(2,POINT3_DIR,POINT3_EN,POINT4_DIR,POINT4_EN,"Station siding east",STATION_SIDING_EAST,POINT3_LED,POINT4_LED,POINT3_CLOSE,POINT3_THROW,POINT4_CLOSE,POINT4_THROW)

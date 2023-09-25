@@ -44,14 +44,18 @@ ONTHROW(point_id) \
   SET(led_pin) \
 DONE \
 AUTOSTART SEQUENCE(point_id) \
-  AFTER(close_pin) \
-    IFTHROWN(point_id) \
-      CLOSE(point_id) \
-    ENDIF \
-  AFTER(throw_pin) \
-    IFCLOSED(point_id) \
-      THROW(point_id) \
-    ENDIF \
+  IF(close_pin) \
+    AFTER(close_pin) \
+      IFTHROWN(point_id) \
+        CLOSE(point_id) \
+      ENDIF \
+  ENDIF \
+  IF(throw_pin) \
+    AFTER(throw_pin) \
+      IFCLOSED(point_id) \
+        THROW(point_id) \
+      ENDIF \
+  ENDIF \
 FOLLOW(point_id)
 
 // Turnout definitions using the ROKUHANPOINT macro
@@ -107,24 +111,32 @@ RESET(point1_dir) RESET(point2_dir) \
 SET(point1_en) SET(point2_en) DELAY(PULSE) RESET(point1_en) RESET(point2_en) \
 SET(led_pin1) SET(led_pin2) \
 DONE \
-AUTOSTART SEQUENCE(point_id) \
-  AFTER(close_pin1) \
-    IFTHROWN(point_id) \
-      CLOSE(point_id) \
-    ENDIF \
-  AFTER(throw_pin1) \
-    IFCLOSED(point_id) \
-      THROW(point_id) \
-    ENDIF \
-  AFTER(close_pin2) \
-    IFTHROWN(point_id) \
-      CLOSE(point_id) \
-    ENDIF \
-  AFTER(throw_pin2) \
-    IFCLOSED(point_id) \
-      THROW(point_id) \
-    ENDIF \
-FOLLOW(point_id)
+AUTOSTART SEQUENCE(point1_id) \
+  IF(close_pin1) \
+    AFTER(close_pin1) \
+      IFTHROWN(point1_id) \
+        CLOSE(point1_id) \
+      ENDIF \
+  ENDIF \
+  IF(throw_pin1) \
+    AFTER(throw_pin1) \
+      IFCLOSED(point1_id) \
+        THROW(point1_id) \
+      ENDIF \
+  ENDIF \
+  IF(close_pin2) \
+    AFTER(close_pin2) \
+      IFTHROWN(point1_id) \
+        CLOSE(point1_id) \
+      ENDIF \
+  ENDIF \
+  IF(throw_pin2) \
+    AFTER(throw_pin2) \
+      IFCLOSED(point1_id) \
+        THROW(point1_id) \
+      ENDIF \
+  ENDIF \
+FOLLOW(point1_id)
 
 ROKUHANPOINTPAIR(1,POINT1_DIR,POINT1_EN,POINT2_DIR,POINT2_EN,"Station siding west",STATION_SIDING_WEST,POINT1_LED,POINT2_LED,POINT1_CLOSE,POINT1_THROW,POINT2_CLOSE,POINT2_THROW)
 ROKUHANPOINTPAIR(2,POINT3_DIR,POINT3_EN,POINT4_DIR,POINT4_EN,"Station siding east",STATION_SIDING_EAST,POINT3_LED,POINT4_LED,POINT3_CLOSE,POINT3_THROW,POINT4_CLOSE,POINT4_THROW)

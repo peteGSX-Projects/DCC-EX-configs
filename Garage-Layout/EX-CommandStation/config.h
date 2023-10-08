@@ -186,6 +186,6 @@ The configuration file for DCC-EX Command Station
 //
 //#define SERIAL1_COMMANDS
 //#define SERIAL2_COMMANDS
-//#define SERIAL3_COMMANDS
+#define SERIAL3_COMMANDS
 
 /////////////////////////////////////////////////////////////////////////////////////

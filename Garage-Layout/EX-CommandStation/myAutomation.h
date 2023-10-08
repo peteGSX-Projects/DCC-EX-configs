@@ -8,7 +8,6 @@
 #include "myPinAliases.h"
 
 // Include extra device drivers
-#include "IO_EXTurntable.h"
 #include "IO_RotaryEncoder.h"
 
 // Define I2C devices here

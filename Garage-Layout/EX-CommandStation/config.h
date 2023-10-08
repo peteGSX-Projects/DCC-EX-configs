@@ -185,7 +185,7 @@ The configuration file for DCC-EX Command Station
 // NOTE: do not define here the WiFi shield serial port or your wifi will not work.
 //
 //#define SERIAL1_COMMANDS
-//#define SERIAL2_COMMANDS
-#define SERIAL3_COMMANDS
+#define SERIAL2_COMMANDS
+// #define SERIAL3_COMMANDS
 
 /////////////////////////////////////////////////////////////////////////////////////

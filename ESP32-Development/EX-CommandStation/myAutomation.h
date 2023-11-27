@@ -2,6 +2,11 @@
 ROSTER(2004, "QR 2004", "Lights/Horn/Bell/Whistle/Brakes/Idiots/Crap Programming")
 ROSTER(2006, "QR 2006", "Lights")
 ROSTER(2010, "QR 2010", "Lights")
+ROSTER(1001, "QR 1001 - Testing", "Lights/Horn")
+ROSTER(1002, "QR 1002 - Testing", "Lights/Horn")
+ROSTER(1003, "QR 1003 - Testing", "Lights/Horn")
+ROSTER(1004, "QR 1004 - Testing", "Lights/Horn")
+ROSTER(1005, "QR 1005 - Testing", "Lights/Horn")
 
 // Turntables
 DCC_TURNTABLE(2,0,"Fake DCC turntable")

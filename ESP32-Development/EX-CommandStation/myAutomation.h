@@ -1,3 +1,15 @@
+// IR sensor testing
+HAL(EXIOExpander,800,14,0x65)
+
+AUTOSTART SEQUENCE(100)
+  IF(800)
+    PRINT("Sensor 800 activated")
+  ENDIF
+  IF(801)
+    PRINT("Sensor 801 activated")
+  ENDIF
+FOLLOW(100)
+
 // Roster
 ROSTER(2004, "QR 2004", "Lights/Horn/Bell/Whistle/Brakes/Idiots/Crap Programming")
 ROSTER(2006, "QR 2006", "Lights")

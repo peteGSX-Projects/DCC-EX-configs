@@ -57,7 +57,8 @@ The configuration file for DCC-EX Command Station
 //   |
 //   +-----------------------v
 //
-#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+// #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+#define MOTOR_SHIELD_TYPE EX8874_SHIELD
 //
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -85,6 +86,7 @@ The configuration file for DCC-EX Command Station
 // Set to false if you not even want it on the Arduino Mega
 //
 #define ENABLE_WIFI true
+#include "myWiFi.h"
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -108,13 +110,13 @@ The configuration file for DCC-EX Command Station
 // The AP mode password must be at least 8 characters long.
 //
 // Your SSID may not contain ``"'' (double quote, ASCII 0x22).
-#define WIFI_SSID "Your network name"
+// #define WIFI_SSID "Your network name"
 //
 // WIFI_PASSWORD is the network password for your home network or if
 // you want to change the password from default AP mode password
 // to the AP password you want. 
 // Your password may not contain ``"'' (double quote, ASCII 0x22).
-#define WIFI_PASSWORD "Your network passwd"
+// #define WIFI_PASSWORD "Your network passwd"
 //
 // #include "myWiFi.h"
 // WIFI_HOSTNAME: You probably don't need to change this
@@ -124,7 +126,7 @@ The configuration file for DCC-EX Command Station
 // WiFi will be enabled (Mega only). The default channel is set to "1" whether
 // this line exists or not. If you need to use an alternate channel (we recommend
 // using only 1,6, or 11) you may change it here.
-#define WIFI_CHANNEL 11
+#define WIFI_CHANNEL 1
 //
 // WIFI_FORCE_AP: If you'd like to specify your own WIFI_SSID in AP mode, set this
 // true. Otherwise it is assumed that you'd like to connect to an existing network

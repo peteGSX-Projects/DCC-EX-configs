@@ -58,7 +58,13 @@ The configuration file for DCC-EX Command Station
 //   +-----------------------v
 //
 // #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
-#define MOTOR_SHIELD_TYPE EX8874_SHIELD
+// #define MOTOR_SHIELD_TYPE EX8874_SHIELD
+#define EX8874_LIMITED F("EX8874_LIMITED"),\
+ new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 35/*A2*/, 1.27, 500, 36 /*A4*/), \
+ new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 34/*A3*/, 1.27, 500, 39 /*A5*/)
+
+#define MOTOR_SHIELD_TYPE EX8874_LIMITED
+
 //
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -85,8 +91,8 @@ The configuration file for DCC-EX Command Station
 // NOTE: Only supported on Arduino Mega
 // Set to false if you not even want it on the Arduino Mega
 //
-#define ENABLE_WIFI true
 #include "myWiFi.h"
+#define ENABLE_WIFI true
 
 /////////////////////////////////////////////////////////////////////////////////////
 //

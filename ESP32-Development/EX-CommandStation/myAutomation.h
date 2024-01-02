@@ -1,5 +1,6 @@
 // IR sensor testing
-HAL(EXIOExpander,800,14,0x65)
+HAL(EXIOExpander,800,2,0x50)
+HAL(EXIOExpander,810,1,0x51)
 
 AUTOSTART SEQUENCE(100)
   IF(800)

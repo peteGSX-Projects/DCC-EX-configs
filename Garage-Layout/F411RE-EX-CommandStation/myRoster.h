@@ -7,6 +7,7 @@
 */
 
 // Define loco roster
+ROSTER(3, "Default", "Lights")
 ROSTER(2004, "QR 2004", "Lights")
 ROSTER(2006, "QR 2006", "Lights")
 ROSTER(2010, "QR 2010", "Lights")

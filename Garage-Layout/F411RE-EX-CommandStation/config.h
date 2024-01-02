@@ -63,10 +63,10 @@ The configuration file for DCC-EX Command Station
 // For Nucleo/STM32 and any 3v3 microcontroller except ESP32
 #define MOTOR_SHIELD_TYPE EX8874_WITH_ARDUINO
 #define EX8874_WITH_ARDUINO F("EX8874_WITH_ARDUINO"),\
-new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 5000, A4), \
-new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, A5), \
-new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 0.488, 1500, UNUSED_PIN), \
-new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 0.488, 1500, UNUSED_PIN)
+new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 500, A4), \
+new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 500, A5), \
+new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 0.488, 500, UNUSED_PIN), \
+new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 0.488, 500, UNUSED_PIN)
 
 //
 /////////////////////////////////////////////////////////////////////////////////////

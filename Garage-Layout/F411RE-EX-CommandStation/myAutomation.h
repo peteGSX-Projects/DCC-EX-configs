@@ -1,6 +1,8 @@
-// Define I2C devices here
+// Includes required before anything else
 #include "IO_RotaryEncoder.h"
 #include "myAliases.h"
+
+// Define I2C devices here
 HAL(MCP23017, 164, 16, 0x20)
 HAL(MCP23017, 180, 16, 0x21)
 HAL(MCP23017, 196, 16, 0x22)
@@ -60,6 +62,7 @@ START(TTROUTE_1)
 
 DONE
 
+// Remaining includes
 #include "myPoints.h"
 #include "myTurntable.h"
 #include "myRoster.h"

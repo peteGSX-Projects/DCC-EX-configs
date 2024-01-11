@@ -235,6 +235,14 @@ new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 0.488, 500, UNUSED_PIN)
 // at the same time, there must be a border.
 
 /////////////////////////////////////////////////////////////////////////////////////
+// Some newer 32bit microcontrollers boot very quickly, so powering on I2C and other
+// peripheral devices at the same time may result in the CommandStation booting too
+// quickly to detect them.
+// To work around this, uncomment the STARTUP_DELAY line below and set a value in
+// milliseconds that works for your environment, default is 3000 (3 seconds).
+#define STARTUP_DELAY 3000
+
+/////////////////////////////////////////////////////////////////////////////////////
 //
 // DEFINE TURNOUTS/ACCESSORIES FOLLOW NORM RCN-213
 //

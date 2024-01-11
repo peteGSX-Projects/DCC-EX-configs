@@ -2,7 +2,7 @@
 // Point LEDs are set/reset via macro in myPoints.h
 // Decoupler LEDs are set/reset via macro in myDecouplers.h
 
-AUTOSTART SEQUENCE(100)
+AUTOSTART SEQUENCE(DECOUPLER_SEQUENCE)
   IF(DECOUPLER1_BUTTON)
     START(WAREHOUSE_DECOUPLER)
   ENDIF
@@ -29,32 +29,32 @@ FOLLOW(100)
 // Event handler for the rotary encoder/turntable controller
 // Blackpill at 0x70, Vpin 700
 
-ONCHANGE(700)
-  IFRE(700, 0)
+ONCHANGE(RE_VPIN)
+  IFRE(RE_VPIN, 0)
     START(TTROUTE_9)
   ENDIF
-  IFRE(700, 1)
+  IFRE(RE_VPIN, 1)
     START(TTROUTE_1)
   ENDIF
-  IFRE(700, 2)
+  IFRE(RE_VPIN, 2)
     START(TTROUTE_2)
   ENDIF
-  IFRE(700, 3)
+  IFRE(RE_VPIN, 3)
     START(TTROUTE_3)
   ENDIF
-  IFRE(700, 4)
+  IFRE(RE_VPIN, 4)
     START(TTROUTE_4)
   ENDIF
-  IFRE(700, 5)
+  IFRE(RE_VPIN, 5)
     START(TTROUTE_5)
   ENDIF
-  IFRE(700, 6)
+  IFRE(RE_VPIN, 6)
     START(TTROUTE_6)
   ENDIF
-  IFRE(700, 7)
+  IFRE(RE_VPIN, 7)
     START(TTROUTE_7)
   ENDIF
-  IFRE(700, 8)
+  IFRE(RE_VPIN, 8)
     START(TTROUTE_8)
   ENDIF
 DONE

@@ -7,15 +7,15 @@
 */
 
 // Join/unjoin programming track
-ROUTE(1, "Join Programming Track")
+ROUTE(JOIN_ROUTE, "Join Programming Track")
   JOIN
 DONE
 
-ROUTE(2, "Unjoin Programming Track")
+ROUTE(UNJOIN_ROUTE, "Unjoin Programming Track")
   UNJOIN
 DONE
 
-ROUTE(3, "Main to turntable")
+ROUTE(MAIN_TO_TURNTABLE_ROUTE, "Main to turntable")
   THROW(YARD_ACCESS)
   THROW(STORAGE_1_AND_MAINTENANCE)
   CLOSE(STORAGE_2)

@@ -24,7 +24,7 @@ AUTOSTART SEQUENCE(DECOUPLER_SEQUENCE)
   IF(DECOUPLER7_BUTTON)
     START(MAINTENANCE_DECOUPLER)
   ENDIF
-FOLLOW(100)
+FOLLOW(DECOUPLER_SEQUENCE)
 
 // Event handler for the rotary encoder/turntable controller
 // Blackpill at 0x70, Vpin 700

@@ -10,6 +10,9 @@
 // Include extra device drivers
 #include "IO_RotaryEncoder.h"
 
+// Don't create default devices
+HAL_IGNORE_DEFAULTS
+
 // Define I2C devices here
 HAL(MCP23017, 164, 16, 0x20)
 HAL(MCP23017, 180, 16, 0x21)

@@ -65,6 +65,8 @@ The configuration file for DCC-EX Command Station
 
 #define MOTOR_SHIELD_TYPE EX8874_LIMITED
 
+#define MAX_CURRENT 500
+
 //
 /////////////////////////////////////////////////////////////////////////////////////
 //
@@ -91,7 +93,7 @@ The configuration file for DCC-EX Command Station
 // NOTE: Only supported on Arduino Mega
 // Set to false if you not even want it on the Arduino Mega
 //
-#include "myWiFi.h"
+// #include "myWiFi.h"
 #define ENABLE_WIFI true
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -116,13 +118,13 @@ The configuration file for DCC-EX Command Station
 // The AP mode password must be at least 8 characters long.
 //
 // Your SSID may not contain ``"'' (double quote, ASCII 0x22).
-// #define WIFI_SSID "Your network name"
+#define WIFI_SSID "Your network name"
 //
 // WIFI_PASSWORD is the network password for your home network or if
 // you want to change the password from default AP mode password
 // to the AP password you want. 
 // Your password may not contain ``"'' (double quote, ASCII 0x22).
-// #define WIFI_PASSWORD "Your network passwd"
+#define WIFI_PASSWORD "Your network passwd"
 //
 // #include "myWiFi.h"
 // WIFI_HOSTNAME: You probably don't need to change this

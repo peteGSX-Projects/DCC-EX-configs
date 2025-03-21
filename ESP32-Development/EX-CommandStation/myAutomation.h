@@ -11,21 +11,34 @@
 //   ENDIF
 // FOLLOW(100)
 
+AUTOMATION(100, "Throttle Handoff")
+  FWD(20)
+  DELAY(2000)
+  FON(0)
+  DELAY(5000)
+  STOP
+  DELAY(2000)
+  REV(5000)
+  FOFF(0)
+  DELAY(2000)
+  STOP
+DONE
+
 // Display testing
-AUTOSTART SEQUENCE(101)
-  SCREEN(1,0,"Test screen 0 row 0")
-  SCREEN(1,1,"Test screen 0 row 1")
-  SCREEN(1,2,"Test screen 0 row 2")
-  DELAY(3000)
-  SCREEN(1,0,"Change row 0 to a really long line of text for more screen function testing")
-  SCREEN(1,1,"Change row 1 to something")
-  SCREEN(1,2,"Row 2")
-  DELAY(3000)
-  SCREEN(1,0,"Suzuki Katanas rule")
-  SCREEN(1,1,"EXRAIL is cool")
-  SCREEN(1,2,"Coffee is good")
-  DELAY(3000)
-FOLLOW(101)
+// AUTOSTART SEQUENCE(101)
+//   SCREEN(1,0,"Test screen 0 row 0")
+//   SCREEN(1,1,"Test screen 0 row 1")
+//   SCREEN(1,2,"Test screen 0 row 2")
+//   DELAY(3000)
+//   SCREEN(1,0,"Change row 0 to a really long line of text for more screen function testing")
+//   SCREEN(1,1,"Change row 1 to something")
+//   SCREEN(1,2,"Row 2")
+//   DELAY(3000)
+//   SCREEN(1,0,"Suzuki Katanas rule")
+//   SCREEN(1,1,"EXRAIL is cool")
+//   SCREEN(1,2,"Coffee is good")
+//   DELAY(3000)
+// FOLLOW(101)
 
 // Roster
 ROSTER(2004, "QR 2004", "Lights/Horn/Bell/Whistle/Brakes/Idiots/Crap Programming")

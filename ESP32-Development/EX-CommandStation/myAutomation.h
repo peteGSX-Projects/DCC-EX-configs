@@ -18,7 +18,8 @@ AUTOMATION(100, "Throttle Handoff")
   DELAY(5000)
   STOP
   DELAY(2000)
-  REV(5000)
+  REV(10)
+  DELAY(5000)
   FOFF(0)
   DELAY(2000)
   STOP

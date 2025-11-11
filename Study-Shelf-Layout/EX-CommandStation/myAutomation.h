@@ -3,6 +3,8 @@
 
 // Include other definition files here
 #include "myPoints.h"
+#include "myRoster.h"
+#include "myTurntable.h"
 
 // HAL devices.
 HAL_IGNORE_DEFAULTS
@@ -14,7 +16,3 @@ HAL(EXTurntable,TURNTABLE_VPIN,TURNTABLE_ID,0x60)
 HAL(EXSensorCAM,SENSORCAM_LEFT,80,0x11)
 HAL(EXSensorCAM,SENSORCAM_RIGHT,80,0x12)
 
-// Any startup sequences here
-AUTOSTART
-START(CLOSE_ALL_POINTS)
-DONE

@@ -62,6 +62,7 @@ ALIAS(DECOUPLER_SIDING_2_SERVO,102)
 
 // General route aliases
 ALIAS(CLOSE_ALL_POINTS,400)
+ALIAS(TURNTABLE_STARTUP,401)
 
 // Signal aliases
 /* Placeholders

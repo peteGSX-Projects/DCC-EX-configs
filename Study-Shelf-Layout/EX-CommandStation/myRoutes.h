@@ -1,5 +1,11 @@
 // Route definitions here
 
+// Startup sequence to show all is ready
+AUTOSTART
+SEQUENCE(DISPLAY_STARTUP)
+SCREEN(1,0,"Shelf layout ready")
+DONE
+
 // Startup route to close all points
 AUTOSTART
 ROUTE(CLOSE_ALL_POINTS,"Close all points")
@@ -16,6 +22,6 @@ DONE
 
 // Startup route to set turntable to storage 1
 AUTOSTART
-ROUTE(TURNTABLE_STARTUP, "Start turntable at Storage 1")
-  ROTATE(TURNTABLE_ID, TURNTABLE_STORAGE_1)
+ROUTE(TURNTABLE_STARTUP,"Start turntable at Storage 1")
+  ROTATE(TURNTABLE_ID,TURNTABLE_STORAGE_1,Turn)
 DONE

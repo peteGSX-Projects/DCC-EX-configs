@@ -70,7 +70,7 @@ The configuration file for DCC-EX Command Station
 // PS has a higher rating than your motor shield you do not need this.
 // You can use this as well if you are cautious and your trains do not
 // need full current.
-// #define MAX_CURRENT 2250
+#define MAX_CURRENT 300
 //
 /////////////////////////////////////////////////////////////////////////////////////
 //

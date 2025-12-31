@@ -15,6 +15,7 @@ HAL(HALDisplay<OLED>, 1, {I2CMux_0, SubBus_1, 0x3c}, 132, 64)
 
 // Include other definition files here
 #include "myDecouplers.h"
+#include "myMimicPanel.h"
 #include "myPoints.h"
 #include "myRoster.h"
 #include "myRoutes.h"

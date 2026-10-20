@@ -1,6 +1,11 @@
 // Include aliases first before anything else.
 #include "myAliases.h"
 
+// Set I2C clock speed
+AUTOSTART
+STEALTH(I2CManager.setClock(100000);)
+DONE
+
 // HAL devices.
 HAL_IGNORE_DEFAULTS
 HAL(PCA9685,100,16,0x40) // Decouplers and semaphores

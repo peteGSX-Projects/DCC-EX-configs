@@ -119,12 +119,7 @@ The configuration file for DCC-EX Command Station
 // CS to make them show up with different names on the network.
 // Otherwise do not touch.
 // #define WIFI_HOSTNAME "dccex"
-
-#if __has_include ( "myWifi.h" )
-  #include "myWiFi.h"
-#else
-  #include "myWiFiExample.h"
-#endif
+#include "myWiFi.h"
 
 //
 // WIFI_CHANNEL: The default channel is set to "1". If you need to use an
